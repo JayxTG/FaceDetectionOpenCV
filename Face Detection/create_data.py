@@ -22,7 +22,7 @@ sub_data = get_name()
 # Check if a name was provided
 if not sub_data:
     print("Name not provided, exiting...")
-    sys.exit()
+    subdata = 'face'
 
 # Folder to store the captured face images
 datasets = 'datasets'

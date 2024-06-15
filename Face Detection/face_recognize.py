@@ -2,12 +2,30 @@ import cv2
 import sys
 import numpy as np
 import os
+import tkinter as tk
+from tkinter import simpledialog
 
 # Constants
 size = 4
 haar_file = 'haarcascade_frontalface_default.xml'
 datasets = 'datasets'
-sub_data = 'jayamadu'
+
+# Function to prompt for the name using tkinter
+def get_name():
+    root = tk.Tk()
+    root.withdraw()  # Hide the main window
+    user_name = simpledialog.askstring(title="Name Prompt", prompt="Enter the name of the person:")
+    root.destroy()  # Destroy the main window after getting the input
+    return user_name
+
+# Prompt for the name of the person
+sub_data = get_name()
+
+# Check if a name was provided
+if not sub_data:
+    print("Name not provided, exiting...")
+    subdata = 'face'
+
 (width, height) = (130, 100)
 
 # Part 1: Create LBPHFaceRecognizer
