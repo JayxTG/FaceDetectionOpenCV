@@ -25,7 +25,7 @@ The objective of this project is to develop a face recognition system capable of
 
 - `OpenCV Version check.py`: Python script to check the installed OpenCV version.
 - `haarcascade_frontalface_default.xml`: Pre-trained model for face detection.
-- `datasets`: Folder containing datasets used for training the face recognition model.
+- `datasets`: Folder containing datasets used for training the face recognition model.\
  -- `face_recognize.py`: Script for recognizing faces.
  --`create_data.py`: Script for creating face data.
  --`haarcascade_frontalface_default.xml`: Pre-trained model for face detection.
